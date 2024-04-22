@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1118029-5b69-4d0f-a9f8-3f14b32e5dd1" name="Changes" comment="updates will be used for future work at project">
+      <change afterPath="$PROJECT_DIR$/Projekty.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/katering.html" beforeDir="false" afterPath="$PROJECT_DIR$/katering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/služby .html" beforeDir="false" afterPath="$PROJECT_DIR$/služby .html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +84,7 @@
       <workItem from="1713773277450" duration="556000" />
       <workItem from="1713778076646" duration="442000" />
       <workItem from="1713778565016" duration="589000" />
+      <workItem from="1713779418880" duration="3010000" />
     </task>
     <task id="LOCAL-00001" summary="updates will be used for future work at project">
       <option name="closed" value="true" />
