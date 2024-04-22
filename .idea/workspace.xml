@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1118029-5b69-4d0f-a9f8-3f14b32e5dd1" name="Changes" comment="updates will be used for future work at project" />
+    <list default="true" id="c1118029-5b69-4d0f-a9f8-3f14b32e5dd1" name="Changes" comment="updates will be used for future work at project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +51,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NK&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/nikolkurucova/Documents/GitHub/webov-technologie-skupina-1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -74,6 +77,8 @@
       <workItem from="1710330388840" duration="710000" />
       <workItem from="1710331105942" duration="328000" />
       <workItem from="1710331437846" duration="301000" />
+      <workItem from="1713737924622" duration="3551000" />
+      <workItem from="1713773277450" duration="556000" />
     </task>
     <task id="LOCAL-00001" summary="updates will be used for future work at project">
       <option name="closed" value="true" />
@@ -111,6 +116,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
