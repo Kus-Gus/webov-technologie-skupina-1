@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+     
+    </style>
+</head>
+<points>
+    <header class="header">
+        <img class="logo" src="../WEB FINAL/obrázky/hlavna/galeria/logo1.jpg" alt="Apple Logo"
+             style="width: 40px !important;
+                  height: 50px !important;">
+    
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="active" href="#">Weddings</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../CELEBRATIONS/Oslavy.html">Celebrations</a>
+            </li>
+            <li class="nav-item">
+                <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Company Parties
+                </a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Farewell with Freedom</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../STUŽKOVÁ/stužkové.html">Ribbons
+                </a>
+            </li>
+        </ul>
+        
+    </header>
+    
+    <ul class="nav-body">
+        <li class="nav-item-body">
+            <a class="active" href="../WEB FINAL/skuska1.html">Home</a>
+        </li>
+    
+        <li class="nav-item-body" >
+            <a href="../WEB FINAL/obleky.html">Products</a>
+                <ul class="sub-nav-body">
+                    
+                    
+                </ul>
+            </div>
+    </li>
+
+    <li class="nav-item-body" >
+        <a href="../WEB FINAL/Services.html">Services</a>
+            <ul class="sub-nav-body">
+                
+
+            </ul>
+        </div>
+    </li>
+
+    <li class="nav-item-body">
+        <a href="../WEB FINAL/galeria.html">Gallery</a>
+        <ul class="sub-nav-body">
+
+        </ul>
+    </li>
+
+    <li class="nav-item-body">
+        <a href="../WEB FINAL/formular.html">Form</a>
+        <ul class="sub-nav-body">
+
+        </ul>
+    </li>
+</ul>
+
+<div class="cont">
+    <div class="heading">
+        <h3><span>Galéria</span></h3>
+    </div>
+    <div class="box">
+        <div class="dream">
+            <img src="../WEB FINAL/obrázky/galeria/1.jpg.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/2.jpg.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/3.jpg.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/4.jpg.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/5.jpg.png" onclick="openLightbox(this)">
+        </div>
+
+        <div class="dream">
+            <img src="../WEB FINAL/obrázky/galeria/jpg6.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg7.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg8.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg9.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg10.png" onclick="openLightbox(this)">
+        </div>
+
+        <div class="dream">
+            <img src="../WEB FINAL/obrázky/galeria/jpg11.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg12.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg13.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg14.png" onclick="openLightbox(this)">
+            <img src="../WEB FINAL/obrázky/galeria/jpg15.png" onclick="openLightbox(this)">
+        </div>
+    </div>
+    
+</div>
+
+<footer class="footer" style="top: 2300px;">
+    <div class="footer-section">
+        <a href="#">Soirée Specialist Heaven@gmail.com</a>
+        <a style="color: pink" href="#"> 0900 000 000</a>
+    </div>
+
+    <div class="footer-section">
+        <a href="#">About us</a>
+        <a href="../WEB FINAL/GDPR.html">GDPR</a>
+    </div>
+
+    <div class="footer-section">
+        <a href="#">Soirée Specialist Heaven (c)</a>
+    </div>
+</footer>
+
+<div id="lightbox_a" class="lightbox_a" onclick="closeLightbox()">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img src="" alt="Obrázok">
+</div>
+
+<script>
+    function openLightbox(img) {
+        var lightbox = document.getElementById("lightbox_a");
+        var imgSrc = img.src;
+        var lightboxImg = lightbox.querySelector("img");
+
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+        var lightbox = document.getElementById("lightbox_a");
+        lightbox.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
