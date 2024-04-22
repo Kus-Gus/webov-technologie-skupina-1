@@ -1,392 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>STUŽKOVÉ</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<html><head>
+    <title>FIREMNÉ večierky</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body, html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
 
-    body {
-      max-width: 1400px;
-      height: 2000px;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      margin: 0 auto; /* This will center the body horizontally */
-      padding: 0;
-    }
+        .bgimg {
+            background-position: center;
+            background-size: cover;
+            background-image: url("img/index/img2.jpg");
+            min-height: 75%;
+        }
 
-    /*hlavička*/
-
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background-color: #151515;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-      box-sizing: border-box;
-      z-index: 100;
-    }
-
-    /*hlavička*/
+        .menu {
+            display: none;
+        }
 
 
-
-
-    /*LOGO*/
-    .logo {
-      height: 30px;
-      margin-left: 15px;
-    }
-    /*LOGO*/
-
-
-
-
-    /*!!!!!!!!!!!!!!!!!!!!!!!!*/
-    .nav {
-      display: flex;
-      list-style-type: none;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .nav-item {
-      position: relative;
-      padding: 15px 20px;
-    }
-
-    .scrollable-content {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: 0;
-      overflow-y: scroll;
-      background-color: #0D1117;
-      color: #FFFFFF;
-      padding: 20px;
-      transition: height 0.25s ease-out;
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    .nav-item:hover .scrollable-content {
-      height: 250px;
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .nav a {
-      display: flex;
-      align-items: center;
-      color: #ffffff;
-      text-decoration: none;
-      height: 100%;
-      border-bottom-width: 4px;
-      padding: 15px 20px;
-    }
-
-    .nav a:hover {
-      color: #ecafaf;
-    }
-
-    .sub-nav {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin: 0px;
-      list-style-type: none;
-    }
-
-    .sub-nav a {
-      padding: 5px 5px;
-    }
-    /* !!!!!!!!!!!!!!!!!!!!!*/
-
-
-    /* !úúúúúúúúúúúúúúú*/
-    .nav-body {
-      display: flex;
-      color: white;
-      list-style-type: none;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .nav-item-body {
-      position: relative;
-      padding: 11px 20px;
-    }
-
-    .scrollable-content-body {
-      position: absolute;
-      top: 55px;
-      left: 0;
-      width: 100%;
-      height: 0;
-      overflow-y: visible;
-      background-color: #cebbbb;
-      color: #000000;
-      padding: 10px;
-      transition: height 0.25s ease-out;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 2;
-    }
-
-    .nav-item-body:hover .scrollable-content-body {
-      height: 185px;
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .nav-body a {
-      display: flex;
-      align-items: center;
-      color: #2c1616;
-      text-decoration: none;
-      height: 100%;
-      border-bottom-width: 5px;
-      padding: 15px 20px;
-    }
-
-    .nav-body a:hover {
-      color: #6c2020;
-    }
-
-    .sub-nav-body {
-      display: flex;
-      flex-direction: column;
-      padding: 6px;
-      margin: 0px;
-      list-style-type: none;
-    }
-
-    .sub-nav-body a {
-      padding: 5px 5px;
-    }
-
-    /* !úúúúúúúúúúúúúúú*/
-
-
-
-    /*PÄTA*/
-    .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100px;
-      background-color: #343434;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      z-index: 100;
-    }
-
-    .footer a {
-      color: #FFFFFF;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .footer a:hover {
-      color: #E0E0E0;
-    }
-
-    .footer-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .footer-section:last-child {
-      margin-bottom: 0;
-    }
-    /*PÄTA*/
-
-
-
-    .img-container {
-      padding: 60px 0 100px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-
-    @media (min-width: 900px) {
-      .header {
-        max-width: 1440px;
-      }
-
-      .nav {
-        max-width: 900px;
-      }
-
-      .img-container {
-        padding: 10px 0;
-      }
-
-      .img {
-        width: 900px;
-        height: 500px;
-      }
-    }
-
-    .gallery img {
-      width: 90%;
-      height: 90%;
-      object-fit: cover;
-    }
-    .controls button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 30px;
-      color: #070202;
-      opacity: 0.5;
-    }
-    .controls button:hover {
-      opacity: 1;
-    }
-    .active {
-      background-color: #aa0457;
-    }
-
-    p {
-      z-index: 1;
-    }
-
-  </style>
+    </style>
 </head>
-
-
 <body>
-<header class="header">
-  <img class="logo" src="../img/logo1.png" alt="Apple Logo"
-       style="width: 40px !important;
-              height: 50px !important;">
-  <ul class="nav">
-    <li class="nav-item">
-      <a href="../SVADBA/svadba.html">Svadby</a>
-    </li>
-    <li class="nav-item">
-      <a href="../OSLAVY/Oslavy.html">Oslavy</a>
-    </li>
-    <li class="nav-item">
-      <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Firemné Večierky</a>
-    </li>
-    <li class="nav-item">
-      <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
-    </li>
-    <li class="nav-item">
-      <a class="active" href="#">Stužkové</a>
-    </li>
-  </ul>
-</header>
 
-<div class="img-container">
-  <img class="img" src="../img/Nasa stuzkova-103 (2).jpg" alt="Image description">
+<!-- Links (sit on top) -->
+<div class="top">
+    <div class="row padding black">
+        <div class="col-top m3-top ">
+            <img src="img/logo/logo1.png" class="block button" style="width: 79px!important;">
+        </div>
+        <div class="col m3 ">
+            <a href="#" class="button block black">STUŽKOVÉ</a>
+        </div>
+        <div class="col m3">
+            <a href="#" class="button block black">SVADBA</a>
+        </div>
+        <div class="col m3">
+            <a href="#" class="button block black">FIREMNÉ VEČIERKY</a>
+        </div>
+        <div class="col m3">
+            <a href="#" class="button block black">OSLAVY</a>
+        </div>
+        <div class="col m3">
+            <a href="#" class="button block black">ROZLÚČKY</a>
+        </div>
+    </div>
 </div>
 
-<ul class="nav-body">
-  <li class="nav-item-body">
-    <a class="active" href="#">About</a>
-  </li>
-  <li class="nav-item-body" >
-
-  <li><a href="obleky_na_stuzkovu.html">Produkty</a></li>
-    <div class="scrollable-content-body">
-      <ul class="sub-nav-body">
-        <li><a href="obleky_na_stuzkovu.html">Mužské obleky</a></li>
-        <li>
-
-
-        <li><a href="#">Spoločenské šaty</a></li>
-        <li><a href="#">Doplnky na stužkovú</a></li>
-      </ul>
+<!-- Header with image -->
+<header class="bgimg display-container grayscale-min" id="home">
+    <div class="display-bottomleft center padding-large hide-small">
+        <span class="tag">Open from 6am to 5pm</span>
     </div>
-  </li>
-  <li class="nav-item-body" >
-
-    <a href="Sluzby.html">Služby</a>
-
-
+    <div class="display-middle center">
+        <span class="text-white" style="font-size:90px">Firemné<br>večierky</span>
     </div>
-  </li>
-  <li class="nav-item-body">
-    <a href="MOje_projekty.html">Projects</a>
-  </li>
-  <li class="nav-item-body">
-    <a href="Rezervacia.html">Formulár</a>
-  </li>
-
-
-
-
-
-
-</ul>
-
-<h1 class="nav-item-body">ABOUT</h1>
-<p class="nav-item-body"> Nadchádzajúce stužkové sú dôležitou udalosťou vo vašom živote, a preto si zaslúžia perfektné plánovanie a organizáciu. S našou firmou môžete mať istotu, že vaše stužkové budú nezabudnuteľné a bezstarostné.
-
-  Naša skúsená a profesionálna tímová ma najvyššiu prioritu zabezpečiť, aby každý detail vášho stužkového večera bol dokonalý. Od výberu vhodnej miestnosti až po zábavný program a lahodné jedlá, sme tu, aby sme vám pomohli vytvoriť nezabudnuteľný zážitok.
-
-  S naším prístupom k plánovaniu sa môžete spoľahnúť na to, že každý aspekt vášho stužkového bude starostlivo zorganizovaný a prispôsobený vašim špecifickým požiadavkám. Nech už je vaša vízia tradičná, elegantná alebo moderná, sme tu, aby sme ju premenili na skutočnosť.
-
-  Prečo sa starať o všetky podrobnosti sami, keď môžete mať našu odbornú pomoc? Kontaktujte nás ešte dnes a dovoľte nám pomôcť vám usporiadať stužkové, na ktoré budete s potešením spomínať ešte dlho po ich skončení. Vaša spokojnosť je naším cieľom číslo jeden!</p>
-
-
-
-
-<img class="logo" src="apple-logo.png" alt="Apple Logo">
-<ul class="nav">
-  <li class="nav-item">
-    <a href="hlavná%20stránka/SVADBA/svadba.html">Svadby</a>
-  </li>
-  <li class="nav-item">
-    <a href="../OSLAVY/Oslavy.html">Oslavy</a>
-  </li>
-  <li class="nav-item">
-    <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Firemné Večierky</a>
-  </li>
-  <li class="nav-item">
-    <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
-  </li>
-  <li class="nav-item">
-    <a href="../STUŽKOVÁ/stužkové.html">Stužkové</a>
-  </li>
-</ul>
+    <div class="display-bottomright center padding-large">
+        <span class="text-white">15 Adr street, 5015</span>
+    </div>
 </header>
 
+<!-- Add a background color and large text to the whole page -->
+<div class="sand grayscale large">
 
-<footer class="footer" style="top: 1500px">
-  <div class="footer-section">
-    <a href="#">LoremIpsum@gmail.com</a>
-    <a style="color: pink" href="#"> 0900 000 000</a>
-  </div>
-  <div class="footer-section">
-    <a href="#">Lorem Ipsum</a>
-    <a href="#">Lorem Ipsum</a>
-  </div>
-  <div class="footer-section">
-    <a href="#">Copiright (c)</a>
-  </div>
+    <div class="top">
+        <div class="row padding black">
+            <div class="col m3 ">
+                <a href="#" class="button block black">ABOUT</a>
+            </div>
+            <div class="col m3">
+                <a href="katering.html" class="button block black">KATERING</a>
+            </div>
+            <div class="col m3">
+                <a href="Projekty.html" class="button block black">PROJEKTY</a>
+            </div>
+            <div class="col m3">
+                <a href="služby%20.html" class="button block black">SLUZBY</a>
+            </div>
+            <div class="col m3">
+                <a href="#" class="button block black">FORMULÁR</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Container -->
+    <div class="container" id="about">
+        <div class="content" style="max-width:700px">
+            <h5 class="center padding-64"><span class="tag wide">ABOUT</span></h5>
+            <p>
+            <h1><b>Soiree Specialist</b></h1> je vaším spoľahlivým partnerom pri organizovaní firemných večierkov, ktoré rozpália váš zmysel pre
+            zábavu a potešia vaše zamestnancov."
+            </p>
+
+            <p>
+                Ponúkame širokú škálu služieb vrátane profesionálneho fotografovania a videografie, DJ a zvukovej techniky,
+                cateringových služieb, dekorácií a osvetlenia a mnoho ďalších. Nechajte naše skúsené tímy vytvoriť atmosféru,
+                ktorá posilní puto medzi vašimi kolegami a poskytne nezabudnuteľné zážitky.
+            </p>
+
+            <div class="panel leftbar light-grey">
+                <p><i>
+                    S Naším tímom môžete mať istotu, že vaše firemné večierky budú plné radosti,
+                    energie a profesionality. Sme tu, aby sme vám pomohli vytvoriť udalosť, ktorá prekvapí
+                    a poteší vašich zamestnancov a posilní spolupatričnosť v tíme.
+                </i></p>
+            </div>
+            <img src="img/index/img2.jpg" style="width:100%;max-width:1000px" class="margin-top">
+            <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+            <p><b>
+                Neváhajte nás kontaktovať pre viac informácií alebo na zarezervovanie vašej nasledujúcej firemnej udalosti.
+                Spoločne vytvoríme večer, na ktorý sa vaši zamestnanci nezabudnuteľne budú spomínať!
+            </b></p>
+
+            <h5 class="center padding-24"><span class="tag wide">NÁŠ TÝM</span></h5>
+
+        </div>
+    </div>
+
+
+    <!-- Contact -->
+
+    <div class="row-padding padding-16 center" >
+        <div class="quarter quarter-20">
+            <img src="img/%20-2.jpg" alt="Sandwich" style="width:100%">
+            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="quarter quarter-20">
+            <img src="img/%20-2.jpg" alt="Steak" style="width:100%">
+            <h3>Let Me Tell You About This Steak</h3>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="quarter quarter-20">
+            <img src="img/man.jpg" alt="Cherries" style="width:100%">
+            <h3>Cherries, interrupted</h3>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            <p>What else?</p>
+        </div>
+        <div class="quarter quarter-20">
+            <img src="img/man.jpg" alt="Pasta and Wine" style="width:100%">
+            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="quarter quarter-20">
+            <img src="img/man.jpg" alt="Pasta and Wine" style="width:100%">
+            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+    </div>
+
+    <!-- End page content -->
+
+</div>
+
+<!-- Footer -->
+<footer class="center light-grey padding-48 large">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="hover-text-green">w3.css</a></p>
 </footer>
-</body>
-</html>
+
+<script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" dark-grey", "");
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " dark-grey";
+    }
+    document.getElementById("myLink").click();
+</script>
+
+
+</body></html>
