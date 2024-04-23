@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html><head>
+  <title>AJAX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("img/index-firemné/img1.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    /* Barevné ladění řádků tabulky */
+    .red { background-color: #ffcccc; }
+    .blue { background-color: #cceeff; }
+    .green { background-color: #ccffcc; }
+    .yellow { background-color: #ffffcc; }
+  </style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="top">
+  <div class="row padding black">
+    <div class="col-top m3-top ">
+      <a href="../hlavná%20stránka.html">
+        <img src="img/logo/logo1.png" class="block button" style="width: 79px!important;">
+      </a>
+
+    </div>
+    <div class="col m3 ">
+      <a href="../STUŽKOVÁ/hlavna-stuzkove.html" class="button block black">STUŽKOVÉ</a>
+    </div>
+    <div class="col m3">
+      <a href="../SVADBA/hlavna-svadba.html" class="button block black">SVADBA</a>
+    </div>
+    <div class="col m3">
+      <a href="hlavná-firemná.html" class="button block black">FIREMNÉ VEČIERKY</a>
+    </div>
+    <div class="col m3">
+      <a href="#" class="button block black">OSLAVY</a>
+    </div>
+    <div class="col m3">
+      <a href="#" class="button block black">ROZLÚČKY</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg display-container grayscale-min" id="home">
+  <div class="display-bottomleft center padding-large hide-small">
+    <span class="tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="display-middle center">
+    <span class="text-white" style="font-size:90px">Firemné<br>večierky</span>
+  </div>
+  <div class="display-bottomright center padding-large">
+    <span class="text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="sand grayscale large">
+
+  <div class="top">
+    <div class="row padding black">
+      <div class="col m3 ">
+        <a href="hlavná-firemná.html" class="button block black">ABOUT</a>
+      </div>
+      <div class="col m3">
+        <a href="Katering-firemné.html" class="button block black">KATERING</a>
+      </div>
+      <div class="col m3">
+        <a href="projekty-firemné.html" class="button block black">PROJEKTY</a>
+      </div>
+      <div class="col m3">
+        <a href="služby-firemné.html" class="button block black">SLUZBY</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row-padding padding-16 center" >
+    <div class="quarter quarter-20">
+      <img src="img/%20-2.jpg" alt="Photo" style="width:100%">
+      <h3>KIKO</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="quarter quarter-20">
+      <img src="img/%20-2.jpg" alt="photo" style="width:100%">
+      <h3>NATY</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="quarter quarter-20">
+      <img src="img/man.jpg" alt="photo" style="width:100%">
+      <h3>NIKI</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p>
+    </div>
+    <div class="quarter quarter-20">
+      <img src="img/man.jpg" alt="photo" style="width:100%">
+      <h3>DORY</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="quarter quarter-20">
+      <img src="img/man.jpg" alt="photo" style="width:100%">
+      <h3>DIDY</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+</div>
+<h1>Team Members</h1>
+<table id="teamTable">
+  <thead>
+  <tr>
+    <th>Position</th>
+    <th>Age</th>
+    <th>Skills</th>
+  </tr>
+  </thead>
+  <tbody id="teamBody">
+  </tbody>
+</table>
+
+  <!-- Footer -->
+  <footer class="container padding-64 light-grey center opacity xlarge" style="margin-top:128px">
+    <p style=" text-align: center">&copy; 2024 Soiree Specialist. All rights reserved.</p>
+
+    <nav>
+      <ul>
+        <li><a href="hlavná-firemná.html">Náš tým</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+<script>
+  // AJAX request to fetch data from JSON file
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var teamData = JSON.parse(this.responseText);
+      displayTeamData(teamData.team);
+    }
+  };
+  xhr.open("GET", "team.json", true);
+  xhr.send();
+
+  // Function to display team data in table
+  function displayTeamData(teamData) {
+    var tableBody = document.getElementById("teamBody");
+    teamData.forEach(function (member) {
+      var row = document.createElement("tr");
+      row.innerHTML = "<td class='" + member.color + "'>" + member.position + "</td>" +
+        "<td>" + member.age + "</td>" +
+        "<td>" + member.skills.join(", ") + "</td>";
+      tableBody.appendChild(row);
+    });
+  }
+
+</script>
+
+</body>
+</html>
