@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="style-svadby.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezervácia</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="logo" src="../WEB FINAL/obrázky/hlavna/galeria/logo1.jpg" alt="Apple Logo"
+         style="width: 40px !important;
+              height: 50px !important;">
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="active" href="#">Weddings</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="../OSLAVY/Oslavy.html">Celebrations</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Company Parties</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Bachelor's party</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="../STUŽKOVÁ/stužkové.html">Ribbons</a>
+        </li>
+    </ul>
+</header>
+
+
+
+<ul class="nav-body">
+    <li class="nav-item-body">
+        <a class="active" href="../WEB FINAL/skuska1.html">Home</a>
+    </li>
+
+    <li class="nav-item-body" >
+        <a href="../WEB FINAL/obleky.html">Products</a>
+            <ul class="sub-nav-body">
+                
+                
+            </ul>
+        </div>
+    </li>
+
+    <li class="nav-item-body" >
+        <a href="../WEB FINAL/Služby.html">Services</a>
+            <ul class="sub-nav-body">
+                
+
+            </ul>
+        </div>
+    </li>
+
+    <li class="nav-item-body">
+        <a href="../WEB FINAL/galeria.html">Gallery</a>
+        <ul class="sub-nav-body">
+                
+
+        </ul>
+    </li>
+
+    <li class="nav-item-body">
+        <a href="../WEB FINAL/formular.html">Form</a>
+        <ul class="sub-nav-body">
+                
+
+        </ul>
+    </li>
+</ul>
+
+
+<div class="container-rezervácia">
+  <h1>Rezervácia</h1>
+
+  
+
+    <form id="reservationForm1">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+          reservation form</title>
+      </head>
+      <body>
+
+        <div class="container-reservation">
+          <h2>Reservation form</h2>
+          <form id="reservationForm">
+            <div class="form-group">
+              <label for="firstName">Name:</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Surname:</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <h3>Reservation core</h3>
+            <div class="form-group">
+              <label for="numPersons">Number of persons:</label>
+              <input type="number" id="numPersons" name="numPersons" min="1" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="allergies">Note about allergies:</label>
+              <textarea id="allergies" name="allergies" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit reservation">
+            </div>
+          </form>
+        </div>
+
+      </body>
+      </html>
+
+      <!-- Vaše prvky pre prvý formulár -->
+    </form>
+ 
+
+  <div class="reservation-form">
+    <h2>Form 2</h2>
+    <form id="reservationForm2">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cake order</title>
+
+      </head>
+      <body>
+
+      <div class="container-rezervácia">
+        <div class="form-section">
+          <h2>Osobné údaje</h2>
+          <form id="personalInfoForm">
+            <div class="form-group">
+              <label for="firstName">Name:</label>
+              <input type="text" id="firstName" name="firstName" required>
+              <span id="firstNameError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Surname:</label>
+              <input type="text" id="lastName" name="lastName" required>
+              <span id="lastNameError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <span id="emailError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number:</label>
+              <input type="tel" id="phone" name="phone" required>
+              <span id="phoneError" class="error"></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-section">
+          <h2>Selection from catering</h2>
+          <form id="cakeOrderForm">
+            <div class="cake-options">
+              <div class="cake-option">
+                <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                <label for="chocolateCake">Predjedlo</label>
+                <input type="number" id="chocolateCakeQty" name="chocolateCakeQty" min="0" placeholder="Kusy">
+                <span id="chocolateCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="vanillaCake" name="vanillaCake">
+                <label for="vanillaCake">Polievka</label>
+                <input type="number" id="vanillaCakeQty" name="vanillaCakeQty" min="0" placeholder="Kusy">
+                <span id="vanillaCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="strawberryCake" name="strawberryCake">
+                <label for="strawberryCake">Hlavné jedlo</label>
+                <input type="number" id="strawberryCakeQty" name="strawberryCakeQty" min="0" placeholder="Kusy">
+                <span id="strawberryCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="lemonCake" name="lemonCake">
+                <label for="lemonCake">Zákusky</label>
+                <input type="number" id="lemonCakeQty" name="lemonCakeQty" min="0" placeholder="Kusy">
+                <span id="lemonCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="carrotCake" name="carrotCake">
+                <label for="carrotCake">Nápoje</label>
+                <input type="number" id="carrotCakeQty" name="carrotCakeQty" min="0" placeholder="Kusy">
+                <span id="carrotCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="appleCake" name="appleCake">
+                <label for="appleCake">Prestrené stoly</label>
+                <input type="number" id="appleCakeQty" name="appleCakeQty" min="0" placeholder="Kusy">
+                <span id="appleCakeQtyError" class="error"></span>
+              </div>
+              <!-- Pridanie ďalších druhov koláčov -->
+            </div>
+            <div class="form-section">
+              <h2>Výber z cateringu</h2>
+              <form id="cakeOrderForm">
+                <div class="cake-options">
+                  <div class="cake-option">
+                    <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                    <label for="chocolateCake">Catering Piešťany</label>
+                  </div>
+                  <div class="cake-options">
+                    <div class="cake-option">
+                    <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                    <label for="chocolateCake">Papa Grill</label>
+                    </div>
+                    <div class="form-section">
+                      <h2>Wedding makeup artist</h2>
+                      <form id="cakeOrderForm">
+                        <div class="cake-options">
+                          <div class="cake-option">
+                            <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                            <label for="chocolateCake">Professional makeup artist Rea Polakovič</label>
+                          </div>
+                          <div class="cake-options">
+                            <div class="cake-option">
+                            <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                            <label for="chocolateCake">Mária Illová</label>
+                            </div>
+                            <h2>Wedding music</h2>
+                            <form id="cakeOrderForm">
+                              <div class="cake-options">
+                                <div class="cake-option">
+                                  <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                                  <label for="chocolateCake">Wedding Octaves Ensemble</label>
+                                </div>
+                                <div class="cake-options">
+                                  <div class="cake-option">
+                                  <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                                  <label for="chocolateCake">Kollárovci</label>
+                                  </div>
+                                  <h2>Wedding photographers</h2>
+                            <form id="cakeOrderForm">
+                              <div class="cake-options">
+                                <div class="cake-option">
+                                  <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                                  <label for="chocolateCake">Max Veselý 35r.</label>
+                                </div>
+                                <div class="cake-options">
+                                  <div class="cake-option">
+                                  <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                                  <label for="chocolateCake">Juraj Hronský 30r.</label>
+                                  </div>
+          </form>
+        </div>
+
+        <div class="form-section">
+          <form id="submitOrderForm">
+            <div class="form-group">
+              <input type="submit" value="Odoslať objednávku">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("submitOrderForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          var valid = true;
+
+          // Kontrola vyplnenia osobných údajov
+          var firstName = document.getElementById("firstName").value;
+          var lastName = document.getElementById("lastName").value;
+          var email = document.getElementById("email").value;
+          var phone = document.getElementById("phone").value;
+
+          if (firstName === "") {
+            document.getElementById("firstNameError").innerText = "Prosím, zadajte meno.";
+            valid = false;
+          } else {
+            document.getElementById("firstNameError").innerText = "";
+          }
+
+          if (lastName === "") {
+            document.getElementById("lastNameError").innerText = "Prosím, zadajte priezvisko.";
+            valid = false;
+          } else {
+            document.getElementById("lastNameError").innerText = "";
+          }
+
+          if (email === "") {
+            document.getElementById("emailError").innerText = "Prosím, zadajte emailovú adresu.";
+            valid = false;
+          } else {
+            document.getElementById("emailError").innerText = "";
+          }
+
+          if (phone === "") {
+            document.getElementById("phoneError").innerText = "Prosím, zadajte telefónne číslo.";
+            valid = false;
+          } else {
+            document.getElementById("phoneError").innerText = "";
+          }
+
+          // Kontrola vyplnenia počtu kusov pre jednotlivé druhy koláčov
+          var chocolateCakeQty = document.getElementById("chocolateCakeQty").value;
+          if (chocolateCakeQty !== "" && parseInt(chocolateCakeQty) < 0) {
+            document.getElementById("chocolateCakeQtyError").innerText = "Prosím, zadajte nezáporné číslo.";
+            valid = false;
+          } else {
+            document.getElementById("chocolateCakeQtyError").innerText = "";
+          }
+
+          // Doplniť pre ďalšie druhy koláčov
+          // Vanilla Cake
+          var vanillaCakeQty = document.getElementById("vanillaCakeQty").value;
+          if (vanillaCakeQty !== "" && parseInt(vanillaCakeQty) < 0) {
+            document.getElementById("vanillaCakeQtyError").innerText = "Prosím, zadajte nezáporné číslo.";
+            valid = false;
+          } else {
+            document.getElementById("vanillaCakeQtyError").innerText = "";
+          }
+
+          // Strawberry Cake
+          var strawberryCakeQty = document.getElementById("strawberryCakeQty").value;
+          if (strawberryCakeQty !== "" && parseInt(strawberryCakeQty) < 0) {
+            document.getElementById("strawberryCakeQtyError").innerText = "Prosím, zadajte nezáporné číslo.";
+            valid = false;
+          } else {
+            document.getElementById("strawberryCakeQtyError").innerText = "";
+          }
+
+          // Lemon Cake
+          var lemonCakeQty = document.getElementById("lemonCakeQty").value;
+          if (lemonCakeQty !== "" && parseInt(lemonCakeQty) < 0) {
+            document.getElementById("lemonCakeQtyError").innerText = "Prosím, zadajte nezáporné číslo.";
+            valid = false;
+          } else {
+            document.getElementById("lemonCakeQtyError").innerText = "";
+          }
+
+          // Carrot Cake
+          var carrotCakeQty = document.getElementById("carrotCakeQty").value;
+          if (carrotCakeQty !== "" && parseInt(carrotCakeQty) < 0) {
+            document.getElementById("carrotCakeQtyError").innerText = "Prosím, zadajte nezáporné číslo.";
+            valid = false;
+          } else {
+            document.getElementById("carrotCakeQtyError").innerText = "";
+          }
+
+          // Apple Cake
+          var appleCakeQty = document.getElementById("appleCakeQty").value;
+          if (appleCakeQty !== "" && parseInt(appleCakeQty) < 0) {
+            document.getElementById("appleCakeQtyError").innerText = "Prosím, zadajte nezáporné číslo.";
+            valid = false;
+          } else {
+            document.getElementById("appleCakeQtyError").innerText = "";
+          }
+
+          if (valid) {
+            document.getElementById("cakeOrderForm").submit();
+          }
+        });
+      </script>
+
+      </body>
+      </html>
+      <!-- Vaše prvky pre druhý formulár -->
+    </form>
+  </div>
+</div>
+<footer class="footer" style="top: 1800px;">
+  <div class="footer-section">
+      <a href="#">Soirée Specialist Heaven@gmail.com</a>
+      <a style="color: pink" href="#"> 0900 000 000</a>
+  </div>
+
+  <div class="footer-section">
+      <a href="#">About us</a>
+      <a href="../WEB FINAL/GDPR.html">GDPR</a>
+  </div>
+
+  <div class="footer-section">
+      <a href="#">Soirée Specialist Heaven (c)</a>
+  </div>
+</footer>
+</body>
+</html>
