@@ -1,0 +1,22 @@
+{
+  "team": [
+    {
+      "color": "red",
+      "position": "Nikol Kurucová",
+      "age": 19,
+      "skills": ["JavaScript", "HTML", "CSS","pencil","JSON","AJAX","XML"]
+    },
+    {
+      "color": "blue",
+      "position": "Kristián Štefanka",
+      "age": 20,
+      "skills": ["JavaScript", "HTML", "CSS","pencil","JSON","AJAX","XML"]
+    },
+    {
+      "color": "green",
+      "position": "Natália Gonosová",
+      "age": 19,
+      "skills": ["JavaScript", "HTML", "CSS","pencil","JSON","AJAX","XML"]
+    }
+  ]
+}

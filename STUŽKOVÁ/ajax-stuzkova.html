@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>STUŽKOVÉ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    /* Barevné ladění řádků tabulky */
+    .red { background-color: #ffcccc; }
+    .blue { background-color: #cceeff; }
+    .green { background-color: #ccffcc; }
+    .yellow { background-color: #ffffcc; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      max-width: 1400px;
+      height: 2000px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0 auto; /* This will center the body horizontally */
+      padding: 0;
+    }
+
+    /*hlavička*/
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #151515;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+
+    /*hlavička*/
+
+
+
+
+    /*LOGO*/
+    .logo {
+      height: 30px;
+      margin-left: 15px;
+    }
+    /*LOGO*/
+
+
+
+
+    /*!!!!!!!!!!!!!!!!!!!!!!!!*/
+    .nav {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+      padding: 15px 20px;
+    }
+
+    .scrollable-content {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      overflow-y: scroll;
+      background-color: #0D1117;
+      color: #FFFFFF;
+      padding: 20px;
+      transition: height 0.25s ease-out;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .nav-item:hover .scrollable-content {
+      height: 250px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav a {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      text-decoration: none;
+      height: 100%;
+      border-bottom-width: 4px;
+      padding: 15px 20px;
+    }
+
+    .nav a:hover {
+      color: #ecafaf;
+    }
+
+    .sub-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0px;
+      list-style-type: none;
+    }
+
+    .sub-nav a {
+      padding: 5px 5px;
+    }
+    /* !!!!!!!!!!!!!!!!!!!!!*/
+
+
+    /* !úúúúúúúúúúúúúúú*/
+    .nav-body {
+      display: flex;
+      color: white;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-item-body {
+      position: relative;
+      padding: 11px 20px;
+    }
+
+    .scrollable-content-body {
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      overflow-y: visible;
+      background-color: #cebbbb;
+      color: #000000;
+      padding: 10px;
+      transition: height 0.25s ease-out;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .nav-item-body:hover .scrollable-content-body {
+      height: 185px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav-body a {
+      display: flex;
+      align-items: center;
+      color: #2c1616;
+      text-decoration: none;
+      height: 100%;
+      border-bottom-width: 5px;
+      padding: 15px 20px;
+    }
+
+    .nav-body a:hover {
+      color: #6c2020;
+    }
+
+    .sub-nav-body {
+      display: flex;
+      flex-direction: column;
+      padding: 6px;
+      margin: 0px;
+      list-style-type: none;
+    }
+
+    .sub-nav-body a {
+      padding: 5px 5px;
+    }
+
+    /* !úúúúúúúúúúúúúúú*/
+
+
+
+    /*PÄTA*/
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #343434;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      z-index: 100;
+    }
+
+    .footer a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #E0E0E0;
+    }
+
+    .footer-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .footer-section:last-child {
+      margin-bottom: 0;
+    }
+    /*PÄTA*/
+
+
+
+    .img-container {
+      padding: 60px 0 100px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    @media (min-width: 900px) {
+      .header {
+        max-width: 1440px;
+      }
+
+      .nav {
+        max-width: 900px;
+      }
+
+      .img-container {
+        padding: 10px 0;
+      }
+
+      .img-container-1 {
+        padding: 30px 0 100px 0;
+        display: flex;
+        justify-content: center;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .img {
+        width: 900px;
+        height: 500px;
+      }
+    }
+
+    .gallery img {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+    }
+    .controls button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 30px;
+      color: #070202;
+      opacity: 0.5;
+    }
+    .controls button:hover {
+      opacity: 1;
+    }
+    .active {
+      background-color: #aa0457;
+    }
+
+    p {
+      z-index: 1;
+    }
+
+  </style>
+</head>
+
+
+<body>
+<header class="header">
+  <a href="../hlavná%20stránka.html">
+    <img class="logo" src="../logo/logo1.png" alt="Apple Logo">
+  </a>
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="../SVADBA/hlavna-svadba.html">Svadby</a>
+
+    </li>
+    <li class="nav-item">
+      <a href="../OSLAVY/Oslavy.html">Oslavy</a>
+    </li>
+    <li class="nav-item">
+      <a href="../FIREMNÉ%20VEČIERKY/hlavná-firemná.html">Firemné Večierky</a>
+    </li>
+    <li class="nav-item">
+      <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
+    </li>
+    <li class="nav-item">
+      <a class="active" href="#">Stužkové</a>
+    </li>
+  </ul>
+</header>
+
+<div class="img-container">
+  <img class="img" src="img-stužková/Stužková/Nasa%20stuzkova-103%20(2).jpg" alt="Image description">
+</div>
+
+<ul class="nav-body">
+  <li class="nav-item-body">
+    <a class="active" href="#">About</a>
+  </li>
+  <li class="nav-item-body" >
+
+  <li><a href="obleky_na_stuzkovu-stuzkove.html">Produkty</a></li>
+
+  </li>
+  <li class="nav-item-body" >
+
+    <a href="catering-stuzkove.html">Služby</a>
+
+
+    </div>
+  </li>
+  <li class="nav-item-body">
+    <a href="MOje_projekty-stuzkove.html">Projects</a>
+  </li>
+  <li class="nav-item-body">
+    <a href="Rezervacia-stuzkove.html">Formulár</a>
+  </li>
+
+
+
+
+
+
+</ul>
+
+<h1 class="nav-item-body">ABOUT</h1>
+<p class="nav-item-body"> Nadchádzajúce stužkové sú dôležitou udalosťou vo vašom živote, a preto si zaslúžia perfektné plánovanie a organizáciu. S našou firmou môžete mať istotu, že vaše stužkové budú nezabudnuteľné a bezstarostné.
+
+  Naša skúsená a profesionálna tímová ma najvyššiu prioritu zabezpečiť, aby každý detail vášho stužkového večera bol dokonalý. Od výberu vhodnej miestnosti až po zábavný program a lahodné jedlá, sme tu, aby sme vám pomohli vytvoriť nezabudnuteľný zážitok.
+
+  S naším prístupom k plánovaniu sa môžete spoľahnúť na to, že každý aspekt vášho stužkového bude starostlivo zorganizovaný a prispôsobený vašim špecifickým požiadavkám. Nech už je vaša vízia tradičná, elegantná alebo moderná, sme tu, aby sme ju premenili na skutočnosť.
+
+  Prečo sa starať o všetky podrobnosti sami, keď môžete mať našu odbornú pomoc? Kontaktujte nás ešte dnes a dovoľte nám pomôcť vám usporiadať stužkové, na ktoré budete s potešením spomínať ešte dlho po ich skončení. Vaša spokojnosť je naším cieľom číslo jeden!</p>
+
+<h1>Team Members</h1>
+<table id="teamTable">
+  <thead>
+  <tr>
+    <th>Position</th>
+    <th>Age</th>
+    <th>Skills</th>
+  </tr>
+  </thead>
+  <tbody id="teamBody">
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<footer class="footer" style="top: 1500px">
+  <div class="footer-section">
+    <a href="#">LoremIpsum@gmail.com</a>
+    <a style="color: pink" href="#"> 0900 000 000</a>
+  </div>
+  <div class="footer-section">
+    <a href="#">Lorem Ipsum</a>
+    <a href="#">Lorem Ipsum</a>
+  </div>
+  <div class="footer-section">
+    <a href="#">Copiright (c)</a>
+  </div>
+</footer>
+<script>
+  // AJAX request to fetch data from JSON file
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var teamData = JSON.parse(this.responseText);
+      displayTeamData(teamData.team);
+    }
+  };
+  xhr.open("GET", "team-stuzkova.json", true);
+  xhr.send();
+
+  // Function to display team data in table
+  function displayTeamData(teamData) {
+    var tableBody = document.getElementById("teamBody");
+    teamData.forEach(function (member) {
+      var row = document.createElement("tr");
+      row.innerHTML = "<td class='" + member.color + "'>" + member.position + "</td>" +
+        "<td>" + member.age + "</td>" +
+        "<td>" + member.skills.join(", ") + "</td>";
+      tableBody.appendChild(row);
+    });
+  }
+
+</script>
+</body>
+</html>
