@@ -6,3 +6,6 @@
 
 <p> NIKOL - [FIREMNÉ VEČIERKY] - správca gitu a aj webového projektu, pomáhala pri commitovaní kedže bol s tým problem u ostatných... upload svoje podstránky aj obrázky, spravila celkový "základný dizajn weboveho projektu" </p>
 <p> zo začiatku sa commitovalo cez nikol počítač , lebo boli problémy s gitom a sublimom.... ku koncu sa to všetko zariadilo a išlo aj ostatným </p>
+
+
+<p>oslavy a rozlúčky ako linky nefungujú, lebo nieje to v gite (kedže to tam niekto nedal)</p>
