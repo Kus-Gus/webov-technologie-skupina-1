@@ -1841,3 +1841,79 @@ th {
 td:last-child {
     padding-left: 16px;
 }
+
+
+
+.reservation-form {
+  margin-bottom: 30px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #ffffff
+}
+
+.reservation-form h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+
+.form-group textarea {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+
+.container-rezervácia {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+
+.form-group input[type="submit"] {
+  background-color: #a1bad3;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #ffffff;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 3px solid #000000;
+  border-radius: 4px;
+}
+
+.container-rezervácia {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.error {
+  color: #ff003b;
+}

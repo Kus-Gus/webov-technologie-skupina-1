@@ -1,10 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--suppress ALL -->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+
+  <link rel="stylesheet" href="style.css">
+
   <meta charset="UTF-8">
-  <title>FORMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezervácia</title>
 </head>
+
 <body>
+<div class="top">
+  <div class="row padding black">
+    <div class="col-top m3-top ">
+      <a href="../hlavná%20stránka.html">
+        <img src="../logo/logo1.png" class="block button" style="width: 79px!important;">
+      </a>
+
+
+    </div>
+    <div class="col m3 ">
+      <a href="../STUŽKOVÁ/hlavna-stuzkove.html" class="button block black">STUŽKOVÉ</a>
+    </div>
+    <div class="col m3">
+      <a href="../SVADBA/hlavna-svadba.html" class="button block black">SVADBA</a>
+    </div>
+    <div class="col m3">
+      <a href="hlavná-firemná.html" class="button block black">FIREMNÉ VEČIERKY</a>
+    </div>
+    <div class="col m3">
+      <a href="#" class="button block black">OSLAVY</a>
+    </div>
+    <div class="col m3">
+      <a href="#" class="button block black">ROZLÚČKY</a>
+    </div>
+  </div>
+</div>
+
+<form class="sand grayscale large">
+
+
+    <h1>Rezervácia</h1>
+
+  <form id="reservationForm1">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+        reservation form</title>
+    </head>
+    <body>
+
+    <div class="container-reservation">
+      <h2>Reservation form</h2>
+      <form id="reservationForm">
+        <div class="form-group">
+          <label for="firstName">Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Surname:</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <h3>Reservation core</h3>
+        <div class="form-group">
+          <label for="numPersons">Number of persons:</label>
+          <input type="number" id="numPersons" name="numPersons" min="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="allergies">Note about allergies:</label>
+          <textarea id="allergies" name="allergies" rows="4" cols="50"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit reservation">
+        </div>
+      </form>
+    </div>
+
+    </body>
+    </html>
+  </form>
+    <h2>Form 2</h2>
+    <form id="reservationForm2">
+        <div class="form-section">
+          <h2>Osobné údaje</h2>
+          <form id="personalInfoForm">
+            <div class="form-group">
+              <label for="firstName">Name:</label>
+              <input type="text" id="firstName" name="firstName" required>
+              <span id="firstNameError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Surname:</label>
+              <input type="text" id="lastName" name="lastName" required>
+              <span id="lastNameError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <span id="emailError" class="error"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number:</label>
+              <input type="tel" id="phone" name="phone" required>
+              <span id="phoneError" class="error"></span>
+            </div>
+          </form>
+        </div>
+        <div class="form-section">
+          <h2>Selection from catering</h2>
+          <form id="cakeOrderForm">
+            <div class="cake-options">
+              <div class="cake-option">
+                <input type="checkbox" id="chocolateCake" name="chocolateCake">
+                <label for="chocolateCake">Predjedlo</label>
+                <input type="number" id="chocolateCakeQty" name="chocolateCakeQty" min="0" placeholder="Kusy">
+                <span id="chocolateCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="vanillaCake" name="vanillaCake">
+                <label for="vanillaCake">Polievka</label>
+                <input type="number" id="vanillaCakeQty" name="vanillaCakeQty" min="0" placeholder="Kusy">
+                <span id="vanillaCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="strawberryCake" name="strawberryCake">
+                <label for="strawberryCake">Hlavné jedlo</label>
+                <input type="number" id="strawberryCakeQty" name="strawberryCakeQty" min="0" placeholder="Kusy">
+                <span id="strawberryCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="lemonCake" name="lemonCake">
+                <label for="lemonCake">Zákusky</label>
+                <input type="number" id="lemonCakeQty" name="lemonCakeQty" min="0" placeholder="Kusy">
+                <span id="lemonCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="carrotCake" name="carrotCake">
+                <label for="carrotCake">Nápoje</label>
+                <input type="number" id="carrotCakeQty" name="carrotCakeQty" min="0" placeholder="Kusy">
+                <span id="carrotCakeQtyError" class="error"></span>
+              </div>
+              <div class="cake-option">
+                <input type="checkbox" id="appleCake" name="appleCake">
+                <label for="appleCake">Prestrené stoly</label>
+                <input type="number" id="appleCakeQty" name="appleCakeQty" min="0" placeholder="Kusy">
+                <span id="appleCakeQtyError" class="error"></span>
+              </div>
+              <!-- Pridanie ďalších druhov koláčov -->
+            </div>
+          </form>
+        </div>
+    </form>
+</form>
+
+<h2>Polievky</h2>
+<form>
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Brokolicová</label>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Rajčinová</label>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Zemiaková</label>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Mrkvová</label>
+    </div>
+  </div>
+</form>
+
+
+<h2>Hlavné jedlá</h2>
+<form>
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Pečené mäso na šťave</label>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Zemiaky Hasselback so slaninou a syrom</label>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>Taco Pasta</label>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="checkbox"  name="polievky">
+      <label>6ks Dumplings</label>
+    </div>
+  </div>
+</form>
+
+<div class="form-section">
+  <form id="submitOrderForm">
+    <div class="form-group">
+      <input type="submit" value="Odoslať objednávku">
+    </div>
+  </form>
+</div>
+
+ <!-- Footer -->
+  <footer class="container padding-64 light-grey center opacity xlarge" style="margin-top:128px">
+    <p style=" text-align: center">&copy; 2024 Soiree Specialist. All rights reserved.</p>
+
+       <nav>
+         <ul>
+           <li><a href="hlavná-firemná.html">Náš tým</a></li>
+           <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+         </ul>
+       </nav>
+  </footer>
+
+  <script>
+                                document.getElementById("submitOrderForm").addEventListener("submit", function(event) {
+                                  event.preventDefault();
+                                  var valid = true;
+
+                                  // Kontrola vyplnenia osobných údajov
+                                  var firstName = document.getElementById("firstName").value;
+                                  var lastName = document.getElementById("lastName").value;
+                                  var email = document.getElementById("email").value;
+                                  var phone = document.getElementById("phone").value;
+
+                                  if (firstName === "") {
+                                    document.getElementById("firstNameError").innerText = "Prosím, zadajte meno.";
+                                    valid = false;
+                                  } else {
+                                    document.getElementById("firstNameError").innerText = "";
+                                  }
+
+                                  if (lastName === "") {
+                                    document.getElementById("lastNameError").innerText = "Prosím, zadajte priezvisko.";
+                                    valid = false;
+                                  } else {
+                                    document.getElementById("lastNameError").innerText = "";
+                                  }
+
+                                  if (email === "") {
+                                    document.getElementById("emailError").innerText = "Prosím, zadajte emailovú adresu.";
+                                    valid = false;
+                                  } else {
+                                    document.getElementById("emailError").innerText = "";
+                                  }
+
+                                  if (phone === "") {
+                                    document.getElementById("phoneError").innerText = "Prosím, zadajte telefónne číslo.";
+                                    valid = false;
+                                  } else {
+                                    document.getElementById("phoneError").innerText = "";
+                                  }
+
+                                  // Kontrola vyplnenia počtu kusov pre jednotlivé druhy koláčov
+                                  var Polievky = document.getElementById("Polievky").value;
+                                  if (Polievky !== "" && parseInt(Polievky) < 0) {
+                                    document.getElementById("Polievky").innerText = "Prosím, zadajte nezáporné číslo.";
+                                    valid = false;
+                                  } else {
+                                    document.getElementById("Polievky").innerText = "";
+                                  }
+                                });
+
+   </script>
+
 
 </body>
 </html>
