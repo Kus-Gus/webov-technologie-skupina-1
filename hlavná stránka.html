@@ -3,6 +3,7 @@
     <title>hlavná stránka</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style-hlavná.css">
     <link rel="stylesheet" href="FIREMNÉ%20VEČIERKY/style.css">
     <style>
         body, html {
@@ -27,28 +28,33 @@
 <body>
 
 <!-- Links (sit on top) -->
-<div class="top">
-    <div class="row padding black">
-        <div class="col-top m3-top ">
-            <img src="logo/logo1.png" class="block button" style="width: 79px!important;">
-        </div>
-        <div class="col m3 ">
-            <a href="STUŽKOVÁ/hlavna-stuzkove.html" class="button block black">STUŽKOVÉ</a>
-        </div>
-        <div class="col m3">
-            <a href="SVADBA/hlavna-svadba.html" class="button block black">SVADBA</a>
-        </div>
-        <div class="col m3">
-            <a href="FIREMNÉ%20VEČIERKY/hlavná-firemná.html" class="button block black">FIREMNÉ VEČIERKY</a>
-        </div>
-        <div class="col m3">
-            <a href="#" class="button block black">OSLAVY</a>
-        </div>
-        <div class="col m3">
-            <a href="#" class="button block black">ROZLÚČKY</a>
-        </div>
-    </div>
-</div>
+<header class="header">
+  <a href="../hlavná%20stránka.html">
+    <img class="logo" src="../logo/logo1.png" alt="Apple Logo"  style="width: 40px !important;
+                  height: 50px !important;">
+  </a>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="active" href="#">Weddings</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../OSLAVY/Oslavy.html">Celebrations</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../FIREMNÉ%20VEČIERKY/hlavná-firemná.html">Company Parties</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Bachelor's party</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../STUŽKOVÁ/hlavna-stuzkove.html">Ribbons</a>
+    </li>
+  </ul>
+</header>
 
 <!-- Header with image -->
 <header class="bgimg display-container grayscale-min" id="home">
@@ -133,16 +139,19 @@
 </div>
 
 <!-- Footer -->
-<footer class="container padding-64 light-grey center opacity xlarge" style="margin-top:128px">
-    <p style=" text-align: center">&copy; 2024 Soiree Specialist. All rights reserved.</p>
+<footer style="top: 1500px; text-align: center">
+  <div class="footer-section">
+    <a href="#">Soirée Specialist Heaven@gmail.com</a>
+    <a style="color: pink" href="#"> 0900 000 000</a>
+  </div>
 
-    <nav>
-        <ul>
-            <li><a href="hlavná%20stránka.html">Náš tým</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-        </ul>
-    </nav>
+  <div class="footer-section">
+    <a href="FIREMNÉ%20VEČIERKY/AJAX.html">NÁŠ TÝM</a>
+  </div>
+
+  <div class="footer-section">
+    <a href="#">Soirée Specialist Heaven (c)</a>
+  </div>
 </footer>
 
 <script>
