@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weddings</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style-svadby.css">
+  <style>
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    /* Barevné ladění řádků tabulky */
+    .red { background-color: #ffcccc; }
+    .blue { background-color: #cceeff; }
+    .green { background-color: #ccffcc; }
+    .yellow { background-color: #ffffcc; }
+
+  </style>
+</head>
+
+<body>
+<header class="header">
+  <a href="../hlavná%20stránka.html">
+    <img class="logo" src="../logo/logo1.png" alt="Apple Logo"  style="width: 40px !important;
+                  height: 50px !important;">
+  </a>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="active" href="#">Weddings</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../OSLAVY/Oslavy.html">Celebrations</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../FIREMNÉ%20VEČIERKY/hlavná-firemná.html">Company Parties</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Bachelor's party</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../STUŽKOVÁ/hlavna-stuzkove.html">Ribbons</a>
+    </li>
+  </ul>
+</header>
+
+<div class="img-cont">
+  <div class="overlay">
+    <h2 style="text-align: center; color: white;">Weddings</h2>
+  </div>
+  <img src="img-svadba/svadby-img1/svadby-obrazky1/hlavna/galeria/logo3.jpg">
+
+
+</div>
+
+<ul class="nav-body">
+  <li class="nav-item-body">
+    <a class="active" href="#">Home</a>
+  </li>
+
+  <li class="nav-item-body" >
+    <a href="obleky-svadba.html">Products</a>
+    <ul class="sub-nav-body">
+
+
+    </ul>
+    </div>
+  </li>
+
+  <li class="nav-item-body" >
+    <a href="Služby-svadba.html">Services</a>
+    <ul class="sub-nav-body">
+
+
+    </ul>
+    </div>
+  </li>
+
+  <li class="nav-item-body">
+    <a href="galeria-svadba.html">Gallery</a>
+    <ul class="sub-nav-body">
+
+
+    </ul>
+  </li>
+
+  <li class="nav-item-body">
+    <a href="formular-svadba.html">Form</a>
+    <ul class="sub-nav-body">
+
+
+    </ul>
+  </li>
+</ul>
+
+
+<p class="nav-item-body"><p>Welcome to the wedding section!</p>
+
+Congratulations on your decision to unite your lives and celebrate your love and commitment in front of family and friends. Your wedding is a unique and unmistakable moment, and we are here to help make it a dream come true.
+
+Our mission is to ensure that every detail of your wedding celebration is exactly as you imagined it. With our team of experienced professionals, you will have at your disposal a wide range of services and options to turn your wedding into an unforgettable event.
+
+From choosing a venue, to arranging flowers, to the musical atmosphere, we are here to help you every step of the way. Let us welcome you to the world of wedding indulgence, where every dream comes true.
+
+We look forward to working with you and helping you create the most beautiful memories of this special day.</p>
+
+<h1>Team Members</h1>
+<table id="teamTable">
+  <thead>
+  <tr>
+    <th>Position</th>
+    <th>Age</th>
+    <th>Skills</th>
+  </tr>
+  </thead>
+  <tbody id="teamBody">
+  </tbody>
+</table>
+
+<footer class="footer" style="top: 1500px;">
+  <div class="footer-section">
+    <a href="#">Soirée Specialist Heaven@gmail.com</a>
+    <a style="color: pink" href="#"> 0900 000 000</a>
+  </div>
+
+  <div class="footer-section">
+    <a href="#">About us</a>
+    <a href="GDPR-svadba.html">GDPR</a>
+  </div>
+
+  <div class="footer-section">
+    <a href="#">Soirée Specialist Heaven (c)</a>
+  </div>
+</footer>
+
+
+
+  <script>
+    // AJAX request to fetch data from JSON file
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var teamData = JSON.parse(this.responseText);
+        displayTeamData(teamData.team);
+      }
+    };
+    xhr.open("GET", "json-svadba.json", true);
+    xhr.send();
+
+    // Function to display team data in table
+    function displayTeamData(teamData) {
+      var tableBody = document.getElementById("teamBody");
+      teamData.forEach(function (member) {
+        var row = document.createElement("tr");
+        row.innerHTML = "<td class='" + member.color + "'>" + member.position + "</td>" +
+          "<td>" + member.age + "</td>" +
+          "<td>" + member.skills.join(", ") + "</td>";
+        tableBody.appendChild(row);
+      });
+    }
+
+
+
+  </script>
+
+</body>
+</html>
